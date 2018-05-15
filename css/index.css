@@ -16,7 +16,7 @@
 }
 
 /*多行溢出 手机端使用*/
-.txt_cut{
+.txt_cut {
 	overflow : hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
