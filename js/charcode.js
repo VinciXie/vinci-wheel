@@ -12,15 +12,12 @@ function int10ToStr16(i10) {
 // 把一个字符串
 // 变成 16进制 字符串
 function stringToString16(s) {
-  // var arr1 = []
-  // for (var i = 0; i < input.length; i++) {
-  //   arr1.push(input.charCodeAt(i))
-  // }
+  if (typeof s !== 'string') {return console.error('不是字符串');}
+  return Array.prototype.map.call(s, s1 => int10ToStr16(s1.charCodeAt(0))).join('')
 
+  // 如果要看清过程，则注释掉上面的一行代码
   var arr1 = Array.prototype.map.call(s, s1 => s1.charCodeAt(0))
-
   console.log('arr1', arr1);
-
   var arr2 = arr1.map(int10ToStr16)
   return arr2.join('')
 }
