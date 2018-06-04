@@ -24,6 +24,21 @@
   -webkit-box-orient: vertical;
 }
 
+/* 文字两端对齐 */
+.text-justify {
+	text-align: justify;
+}
+
+/* 给input的placeholder设置颜色 */
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #a94040;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #a94040;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #a94040;
+}
 
 /* 用 position 实现 水平 垂直居中 */
 /* 需要父元素设置 position 为非 static */
