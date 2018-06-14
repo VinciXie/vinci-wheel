@@ -1,0 +1,6 @@
+# Windows
+*.exe
+
+
+# MacOS
+.DS_Store
