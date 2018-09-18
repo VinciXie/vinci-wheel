@@ -28,6 +28,36 @@ function time_from_id(id) {
 }
 
 
+
+function isUnixTime(time) {
+  // console.log('time', time);
+  let _time = time.toString()
+  // console.log('_time', _time);
+  if (_time.length == 10 && _time.startsWith('1')) {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * 获取时间和日期
+ * @param  {Number} dataString [description]
+ * @return {String}            [description]
+ */
+function getDateAndTime(dataString) {
+  if (dataString == undefined) {
+    return ''
+  }
+  if (isUnixTime(dataString)) {
+    // console.log('dataString', dataString);
+    dataString = dataString * 1000
+  }
+  var d = new Date(dataString)
+  return d.toLocaleDateString() + ' ' + d.toTimeString().slice(0, 8)
+}
+
+
+
 function get_chinese_time(date) {
     if (date == '') {
         // 没有输入
