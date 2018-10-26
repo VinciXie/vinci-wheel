@@ -86,6 +86,11 @@ function get_ms_short() {
 }
 
 
+function secondFormat(s) {
+  let minute = Math.ceil(s / 60)
+  let hour = Math.floor(minute / 60)
+  let leftMinute = minute % 60
+}
 
 
 /**
