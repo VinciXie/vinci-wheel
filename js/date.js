@@ -56,7 +56,19 @@ function getDateAndTime(dataString) {
   return d.toLocaleDateString() + ' ' + d.toTimeString().slice(0, 8)
 }
 
+/**
+ * @return {string} example 2019年3月5日07:00
+ */
+function getTime(str) {
+  const d = new Date(str)
+  const y = d.getFullYear();
+  const m = d.getMonth() + 1;
+  const day = d.getDate();
 
+  const date = y + '年' + m + '月' + day
+  let time = d.toTimeString().substr(0, 5)
+  return date + '日' + time
+}
 
 function get_chinese_time(date) {
     if (date == '') {
