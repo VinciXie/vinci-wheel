@@ -7,5 +7,21 @@
   <body>
     快速排序算法
     <script src="quicksort.js" charset="utf-8"></script>
+    <script>
+
+    const length = 200000
+    console.log('随机生成 ' + length + ' 个数进行排序');
+    var arr0 = []
+    for (var i = 0; i < length; i++) {
+      arr0.push( Math.random() * 10000 )
+    }
+    console.log('arr0.length', arr0.length);
+
+
+    const time1 = new Date().getTime()
+    quicksort(arr0)
+    console.log(new Date().getTime() - time1 + 'ms');
+
+    </script>
   </body>
 </html>

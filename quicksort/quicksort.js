@@ -32,20 +32,6 @@ function quicksort(arr) {
   return quicksort(left).concat(k, quicksort(right))
 }
 
-const arr = [12,14,5,7,8,4,13,6,9,23,14]
-console.log('arr', arr);
-console.log('quicksort(arr)', quicksort(arr));
-
-
-const length = 200000
-console.log('随机生成 ' + length + ' 个数进行排序');
-var arr0 = []
-for (var i = 0; i < length; i++) {
-  arr0.push( Math.random() * 10000 )
+if (typeof module === 'object') {
+  module.exports = quicksort;
 }
-console.log('arr0.length', arr0.length);
-
-
-const time1 = new Date().getTime()
-quicksort(arr0)
-console.log(new Date().getTime() - time1);
