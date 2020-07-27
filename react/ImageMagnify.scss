@@ -1,0 +1,18 @@
+
+.magnify-box {
+  .img-magnify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.magnify-overlay {
+  width: 320px;
+  height: 320px;
+  background-repeat: no-repeat;
+  will-change: background-position;
+}
