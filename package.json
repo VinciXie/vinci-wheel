@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^29.5.0"
   },
   "dependencies": {
     "ts-node": "^8.10.1",
